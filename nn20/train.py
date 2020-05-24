@@ -93,7 +93,7 @@ def main():
 
     #apply no weight decay on bias
     params = split_weights(net)
-    optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9, weight_decay=5e-4)
+    optimizer = optim.SGD(params, lr=0.001, momentum=0.9, weight_decay=5e-4)
 
     step = 0
     accuracy = 0.0
